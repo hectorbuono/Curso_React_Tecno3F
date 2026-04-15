@@ -17,7 +17,7 @@ const CardGrid = ({ lista }) => {
   // --- 2. RETURN LIMPIO ---
   return (
     <div style={gridStyle} id="cards-container">
-      {/* Mapeamos la lista directamente usando la propiedad 'urlFoto' de tu data.js */}
+      {/* Mapeamos la lista directamente usando la propiedad 'urlFoto'*/}
       {lista.map((item) => (
         <CartaClashRoyale
           key={item.id}
@@ -25,7 +25,7 @@ const CardGrid = ({ lista }) => {
           categoria={item.categoria}
           anio={item.anio}
           destacado={item.destacado}
-          urlFoto={item.urlFoto} // <--- Aquí ya usa tu URL real del catálogo
+          urlFoto={item.urlFoto} 
         />
       ))}
     </div>
