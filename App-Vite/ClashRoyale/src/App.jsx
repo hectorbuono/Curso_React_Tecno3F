@@ -38,7 +38,7 @@ function App() {
       </main>
 
       <footer>
-        <p>© 2024 - Mi Proyecto Vite</p>
+        <p>© 2026 - THORDEV - Todos los derechos reservados</p>
       </footer>
     </>
   );
