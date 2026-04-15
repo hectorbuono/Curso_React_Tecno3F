@@ -31,7 +31,7 @@ export const catalogo = [
 { id: 30, titulo: "Neon Genesis Evangelion", categoria: "Anime/Mecha", anio: 1995, destacado: true ,urlFoto: "https://es.web.img2.acsta.net/pictures/18/12/07/12/40/4530128.jpg"},
 { id: 31, titulo: "Apex Legends", categoria: "Battle Royale", anio: 2019, destacado: false ,urlFoto: "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"},
 { id: 32, titulo: "Baldur's Gate 3", categoria: "RPG/Estrategia", anio: 2023, destacado: true ,urlFoto: "https://juegosdigitalesargentina.com/files/images/productos/1702677658-baldurs-gate-3-xbox-series-xs-0.jpg"},
-{ id: 33, titulo: "Bloodborne", categoria: "RPG/Acción", anio: 2015, destacado: false ,urlFoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR81VshB3KBoUOSSqTTFbkcp3K2WeLDbKwq5g&s"},
+{ id: 33, titulo: "Bloodborne", categoria: "RPG/Acción", anio: 2015, destacado: false ,urlFoto: "https://upload.wikimedia.org/wikipedia/en/4/4e/Cowboy_Bebop.png"},
 { id: 34, titulo: "Cowboy Bebop", categoria: "Anime/Ciencia Ficción", anio: 1998, destacado: true ,urlFoto: "https://m.media-amazon.com/images/I/9130m7x9r1L._AC_UF894,1000_QL80_.jpg"},
 { id: 35, titulo: "Terraria", categoria: "Supervivencia/Indie", anio: 2011, destacado: false ,urlFoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY4W5hqA_cH1b94YicOwYeTUM69wockgzctQ&s"}
 ];
