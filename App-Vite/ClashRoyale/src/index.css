@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont;
+
+  /* Fondos */
+  --bg-color-primary: #f8fafc;
+  --bg-color-secundary: #ffffff;
+
+  /* Textos */
+  --text-title: #1e293b;
+  --text-muted: #475569;
+  --text-btn-light: #ffffff;
+  --text-btn-dark: #451a03;
+
+  /* UI: Bordes y Sombras */
+  --border-card: #e2e8f0;
+  --shadow-main: rgba(0, 0, 0, 0.1);
+  --shadow-soft: rgba(0, 0, 0, 0.06);
+  --shadow-img: rgba(0, 0, 0, 0.2);
+
+  /* Colores Especiales Clash Royale */
+  --color-evo: #b24bf3;
+  --color-evo-hover: #9b3ce0;
+  --color-hero: #fbbf24;
+  --color-hero-hover: #f59e0b;
+}
+
+body {
+  background-color: var(--bg-color-primary);
+}
+
+h1 {
+  padding: 1.3rem;
+}
+
+#cards-container {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-self: center;
+  gap: 1rem;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--bg-color-secundary);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px var(--shadow-main),
+    0 2px 4px -1px var(--shadow-soft);
+  border: 1px solid var(--border-card);
+  transition: transform 0.2s ease-in-out;
+}
+
+h3 {
+  color: var(--text-title);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 2px 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 4px var(--shadow-img));
+}
+
+.buttons-container {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* --- CustomHeader --- */
+.custom-header {
+  background-color: var(--bg-color-secundary);
+  border-bottom: 2px solid var(--border-card);
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px var(--shadow-main);
+  margin-bottom: 2rem;
+}
+
+.custom-header__title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-title);
+  letter-spacing: -0.5px;
+}
+
+.custom-header__title span {
+  color: var(--color-evo);
+}
+
+.custom-header__subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  font-weight: normal;
+}
+
+
+/* --- Buscador (Opción A) --- */
+.search-container {
+  max-width: 1100px;
+  margin: 0 auto 0.5rem;
+  padding: 0 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1.1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid var(--border-card);
+  border-radius: 12px;
+  background-color: var(--bg-color-secundary);
+  color: var(--text-title);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-input:focus {
+  border-color: var(--color-evo);
+  box-shadow: 0 0 0 3px rgba(178, 75, 243, 0.15);
+}
+
+
+/* --- CardGrid --- */
+.card-grid {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.card-grid__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+
+/* --- Botón de Favoritos (Opción B) --- */
+.btn-fav {
+  background-color: transparent;
+  border: 2px solid var(--border-card) !important;
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.btn-fav:hover {
+  border-color: var(--color-hero) !important;
+  color: var(--color-hero-hover);
+  background-color: rgba(251, 191, 36, 0.08);
+}
+
+.btn-fav.btn-fav--active {
+  background-color: var(--color-hero);
+  border-color: var(--color-hero) !important;
+  color: var(--text-btn-dark);
+}
+
+.btn-fav.btn-fav--active:hover {
+  background-color: var(--color-hero-hover);
+  border-color: var(--color-hero-hover) !important;
+}
+
+
+/* --- HEADER viejo (estadísticas) --- */
+header {
+  background-color: var(--bg-color-secundary);
+  border-bottom: 2px solid var(--border-card);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px var(--shadow-main);
+  margin-bottom: 2rem;
+  color: var(--text-title);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+header li {
+  background-color: var(--bg-color-primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-card);
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+header li:nth-child(2) {
+  border-bottom: 3px solid var(--color-evo);
+}
+
+header li:nth-child(3) {
+  border-bottom: 3px solid var(--color-hero);
+}
+
+
+/* --- Estilos Dinámicos --- */
+
+/* Tarjeta destacada: borde dorado */
+.card--destacado {
+  border: 2px solid var(--color-hero);
+  box-shadow:
+    0 4px 6px -1px var(--shadow-main),
+    0 2px 4px -1px var(--shadow-soft),
+    0 0 10px rgba(251, 191, 36, 0.25);
+}
+
+/* Badge "Destacado" que aparece arriba de la tarjeta */
+.card--destacado::before {
+  content: '⭐ Destacado';
+  display: inline-block;
+  background-color: var(--color-hero);
+  color: var(--text-btn-dark);
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+/* Tarjeta favorita: fondo violeta suave */
+.card--favorito {
+  border: 2px solid var(--color-evo);
+  background-color: rgba(178, 75, 243, 0.06);
+  box-shadow:
+    0 4px 6px -1px var(--shadow-main),
+    0 2px 4px -1px var(--shadow-soft),
+    0 0 10px rgba(178, 75, 243, 0.2);
+}
+
+/* Si es destacado Y favorito al mismo tiempo, el borde favorito tiene prioridad */
+.card--destacado.card--favorito {
+  border-color: var(--color-evo);
+}
+
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  background-color: var(--bg-color-secundary);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-card);
+  font-size: 0.9rem;
+}
