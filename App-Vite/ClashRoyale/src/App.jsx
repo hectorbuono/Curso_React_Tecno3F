@@ -10,7 +10,7 @@ function App() {
   // Filtra el catálogo según lo que el usuario escribe
   // Filtra el catálogo según lo que el usuario escribe
   const catalogoFiltrado = catalogo.filter((item) =>
-    item.titulo.toLowerCase().startsWith(busqueda.toLowerCase())
+    item.titulo.toLowerCase().includes(busqueda.toLowerCase())
   )
 
   // Agrega o quita un ítem de favoritos
