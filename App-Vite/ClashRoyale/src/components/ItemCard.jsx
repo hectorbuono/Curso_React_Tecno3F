@@ -16,7 +16,7 @@ function ItemCard({ titulo, categoria, anio, urlFoto, destacado, esFavorito, onT
           className={`btn-fav ${esFavorito ? 'btn-fav--active' : ''}`}
           onClick={onToggleFavorito}
         >
-          {esFavorito ? '★ Favorito' : '☆ Agregar'}
+          {esFavorito ? '★ Favorito' : '☆ Establecer como Favorito'}
         </button>
       </div>
     </div>
